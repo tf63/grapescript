@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Card from '@/components/Card'
-import NLink from '@/components/nLink'
+import NLink from '@/components/NLink'
 
 const Home: NextPage = () => {
     return (
         <main>
             <NLink href="/sample">
-                <Card text="Card" />
+                <Card>Card</Card>
             </NLink>
         </main>
     )

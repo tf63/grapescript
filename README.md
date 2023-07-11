@@ -33,23 +33,6 @@
     npm run storybook
 ```
 
-**React Node**
-- childrenを使いたい
-```
-    type LinkProps = {
-        href: string
-        children: ReactNode
-    }
-
-    const nLink: React.FC<LinkProps> = ({ href, children }) => {
-        return (
-            <Link href={href} className={styles.link}>
-                {children}
-            </Link>
-        )
-    }
-```
-
 ### メモ
 
 **atomic design**
@@ -105,6 +88,39 @@
         )
     }
 ```
+
+**コンポーネント名**
+- 先頭を大文字にしないとエラーをはく
+
+
+
+**React Node**
+- childrenを使いたい
+```
+    type LinkProps = {
+        href: string
+        children: ReactNode
+    }
+
+    const NLink: React.FC<LinkProps> = (props) => {
+        return (
+            <Link href={props.href} className={styles.link}>
+                {props.children}
+            </Link>
+        )
+    }
+
+    export default NLink
+```
+
+- childrenはpropsに含めなくとも使える
+```
+    <NLink href="/sample">
+        <Card text="Card" />
+    </NLink>
+```
+
+****
 
 ### 参考
 - styled-components
