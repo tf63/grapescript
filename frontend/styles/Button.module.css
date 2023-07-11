@@ -1,0 +1,25 @@
+.button {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 2em;
+    border: none;
+    border-radius: .5rem;
+    color: #888888;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    text-shadow: 1px 1px #eee;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+
+    box-shadow: -4px -4px 10px #FFFFFF, 4px 4px 10px rgba(102, 102, 102, 0.3);
+}
+
+.blue {
+    background: linear-gradient(296.6deg, #CDE7FF 0.36%, #f6e1ff 99.25%);
+}
+
+.green {
+    background: linear-gradient(296.6deg, #BAFFDE 4.36%, #E9FFBB 94.25%);
+}
