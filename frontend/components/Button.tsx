@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '../styles/Button.module.css'
-import Link from 'next/link'
+import { Color } from '@/types/types'
 
 type ButtonProps = {
     text: string
-    color: 'green' | 'blue'
+    color: Color
 }
 
 export const Button: React.FC<ButtonProps> = ({ text, color }) => {
@@ -13,5 +13,9 @@ export const Button: React.FC<ButtonProps> = ({ text, color }) => {
             return <div className={`${styles.button} ${styles.blue}`}>{text}</div>
         case 'green':
             return <div className={`${styles.button} ${styles.green}`}>{text}</div>
+        case 'white':
+            return <div className={`${styles.button}`}>{text}</div>
+        case 'none':
+            return <div className={`${styles.button}`}>{text}</div>
     }
 }

@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
 import Card from '@/components/Card'
-import NLink from '@/components/NLink'
+import { LinkedButton } from '@/components/LinkedButton'
 
 const Home: NextPage = () => {
     return (
         <main>
-            <NLink href="/sample">
-                <Card>Card</Card>
-            </NLink>
+            <Card>This is Home Page</Card>
+            <LinkedButton href="/sample" text="Sample" color="blue" />
         </main>
     )
 }
