@@ -7,7 +7,7 @@ type LinkProps = {
     children: ReactNode
 }
 
-export const NLink: React.FC<LinkProps> = (props) => {
+export const RLink: React.FC<LinkProps> = (props) => {
     return (
         <Link href={props.href} className={styles.link}>
             {props.children}

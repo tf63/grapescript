@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from './Button'
 import { Color } from '@/types/types'
-import { NLink } from './NLink'
+import { RLink } from './RLink'
 
 type LinkedButtonProps = {
     href: string
@@ -11,8 +11,8 @@ type LinkedButtonProps = {
 
 export const LinkedButton: React.FC<LinkedButtonProps> = (props) => {
     return (
-        <NLink href={props.href}>
+        <RLink href={props.href}>
             <Button text={props.text} color={props.color} />
-        </NLink>
+        </RLink>
     )
 }

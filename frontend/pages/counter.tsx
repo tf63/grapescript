@@ -13,11 +13,11 @@ const Counter: NextPage = () => {
     }
 
     return (
-        <div>
+        <main>
             <h1>Counter: {count}</h1>
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
-        </div>
+        </main>
     )
 }
 
