@@ -2,13 +2,13 @@ import type { NextPage } from 'next'
 import Card from '@/components/Card'
 import { LinkedButton } from '@/components/LinkedButton'
 
-const Home: NextPage = () => {
+const Game: NextPage = () => {
     return (
         <main>
-            <Card>This is Home Page</Card>
-            <LinkedButton href="/select" text="Select" color="blue" />
+            <Card>This is Game Page</Card>
+            <LinkedButton href="/result" text="Result" color="blue" />
         </main>
     )
 }
 
-export default Home
+export default Game
