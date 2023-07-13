@@ -23,15 +23,15 @@ const SSGPost: React.FC<SSGProps> = ({ posts }) => {
     )
 }
 
-export const getStaticProps: GetStaticProps<SSGProps> = async () => {
-    const res = await fetch('http://localhost:3000/api/posts')
-    const posts: Post[] = await res.json()
+// export const getStaticProps: GetStaticProps<SSGProps> = async () => {
+//     const res = await fetch('http://localhost:3000/api/posts')
+//     const posts: Post[] = await res.json()
 
-    return {
-        props: {
-            posts
-        }
-    }
-}
+//     return {
+//         props: {
+//             posts
+//         }
+//     }
+// }
 
 export default SSGPost
