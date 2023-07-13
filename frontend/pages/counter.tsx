@@ -1,6 +1,7 @@
+import { NextPage } from 'next'
 import React, { useState } from 'react'
 
-const Counter: React.FC = () => {
+const Counter: NextPage = () => {
     const [count, setCount] = useState(0)
 
     const increment = () => {
@@ -12,11 +13,11 @@ const Counter: React.FC = () => {
     }
 
     return (
-        <div>
+        <main>
             <h1>Counter: {count}</h1>
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
-        </div>
+        </main>
     )
 }
 

@@ -150,6 +150,13 @@
 
 ```
 
+**export default**
+- export defaultした変数は次のように利用できる
+```
+    import A from '../default_exp' // export default
+    import { B } from '../exp' // export 
+```
+
 ### 参考
 - styled-components
 https://tekrog.com/styled-components
