@@ -35,3 +35,29 @@
 ```
     npm run storybook
 ```
+
+**Jest**
+
+- Jestの導入
+```
+    npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+    npm install --save-dev jest-environment-jsdom
+```
+
+- スクリプトの登録 (`package.json`)
+```
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "test": "jest --watchAll",
+        "lint": "next lint",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+```
+
+- `jest.config.js`ファイルの作成
+
+- https://zenn.dev/miruoon_892/articles/e42e64fbb55137
+- https://zenn.dev/keita_hino/articles/488d31e8c4a240

@@ -1,5 +1,5 @@
-import { LinkedButton } from '@/components/LinkedButton'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
 // headタグをここでかけば全てのpageで適用されるみたい
 class MyDocument extends Document {
     render() {

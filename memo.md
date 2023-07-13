@@ -104,6 +104,52 @@
 - mainにページ共通のcomponentを配置するのはよくなさそう
 - 代わりに`_app.tsx`に配置するべき
 
+**github actions**
+```
+    name: CI
+
+    on:
+    push:
+        branches: [ "dev" ]
+    pull_request:
+        branches: [ "master" ]
+
+
+    jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+            uses: actions/checkout@v2
+
+        - name: Set up Node.js
+            uses: actions/setup-node@v2
+            with:
+            node-version: 19
+            cache: npm
+
+        - name: cache-node-modules
+            uses: actions/cache@v3
+            id: node_modules_cache_id
+            env:
+            cache-name: cache-node-modules
+            with:
+            path: '**/node_modules'
+            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+
+        - name: Install dependencies
+            if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+            run: npm install
+
+        - name: Build
+            run: npm run build
+
+        - name: Test
+            run: npm run test
+
+```
+
 ### 参考
 - styled-components
 https://tekrog.com/styled-components
