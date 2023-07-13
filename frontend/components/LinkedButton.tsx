@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from './Button'
 import { Color } from '@/types/types'
-import NLink from './NLink'
+import { NLink } from './NLink'
 
 type LinkedButtonProps = {
     href: string

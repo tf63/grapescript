@@ -6,11 +6,11 @@ interface Post {
     title: string
 }
 
-interface HomeProps {
+interface SSGProps {
     posts: Post[]
 }
 
-const Home: React.FC<HomeProps> = ({ posts }) => {
+const SSGPost: React.FC<SSGProps> = ({ posts }) => {
     return (
         <div>
             <h1>Posts</h1>
@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
     )
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<SSGProps> = async () => {
     const res = await fetch('http://localhost:3000/api/posts')
     const posts: Post[] = await res.json()
 
@@ -34,4 +34,4 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     }
 }
 
-export default Home
+export default SSGPost

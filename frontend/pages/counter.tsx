@@ -1,6 +1,7 @@
+import { NextPage } from 'next'
 import React, { useState } from 'react'
 
-const Counter: React.FC = () => {
+const Counter: NextPage = () => {
     const [count, setCount] = useState(0)
 
     const increment = () => {
