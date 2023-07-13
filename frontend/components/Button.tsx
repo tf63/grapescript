@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ text, color }) => {
         case 'green':
             return <div className={`${styles.button} ${styles.green}`}>{text}</div>
         case 'white':
-            return <div className={`${styles.button} ${styles.white}`}>{text}</div>
+            return <div className={`${styles.button}`}>{text}</div>
         case 'none':
             return <div className={`${styles.button}`}>{text}</div>
     }

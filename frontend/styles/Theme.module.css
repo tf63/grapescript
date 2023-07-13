@@ -1,6 +1,14 @@
 .link {
+    margin: none;
+    padding: auto;
     text-decoration: none;
     color: inherit;
+}
+
+.center_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page_container {

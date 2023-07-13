@@ -9,7 +9,7 @@ type LinkProps = {
 
 export const RLink: React.FC<LinkProps> = (props) => {
     return (
-        <Link href={props.href} className={styles.link}>
+        <Link href={props.href} className={`${styles.link}`}>
             {props.children}
         </Link>
     )
