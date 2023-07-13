@@ -63,3 +63,16 @@
 
 - https://zenn.dev/miruoon_892/articles/e42e64fbb55137
 - https://zenn.dev/keita_hino/articles/488d31e8c4a240
+
+**環境変数**
+- `env`ファイル名に応じて読み込まれるかどうかが決まる
+- `.env.local`, `.env.development.local`, `.env.production.local`はgit管理しない
+- `.env`, `.env.development`, `.env.production`はgit管理しても良い (管理して良いものを入れる)
+
+- 先頭に`NEXT_PUBLIC_`がつく変数はクライアントでも呼び出せる
+- 使うときは`process.env.NEXT_PUBLIC_****`のようにする
+
+- https://fwywd.com/tech/next-env
+
+
+- 
