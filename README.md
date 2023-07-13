@@ -75,4 +75,27 @@
 - https://fwywd.com/tech/next-env
 
 
-- 
+**Supabase連携**
+![](docs/img/vercel_supabase_connection.png)
+
+- Vercelとローカル環境のリンク (.env.localファイルが作成される)
+```
+    npx vercel link
+    npx vercel env pull
+```
+
+- Supabaseとローカル環境のリンク
+```
+    npm install --save-dev @types/node
+    npm install @supabase/supabase-js
+```
+
+- alpine linuxだと必要なパッケージがある
+```
+    apk update && apk add --no-cache python3 make g++
+```
+
+- https://tech-blog.rakus.co.jp/entry/20220928/vercel
+
+Supabase CLIのインストールとか
+- https://zenn.dev/razokulover/articles/db984ebfcf4bf6
