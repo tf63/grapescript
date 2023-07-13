@@ -27,6 +27,19 @@ export const Blue: Story = {
     }
 }
 
+export const White: Story = {
+    args: {
+        color: 'white',
+        text: 'White'
+    }
+}
+
+export const None: Story = {
+    args: {
+        color: 'none',
+        text: 'None'
+    }
+}
 // export const Secondary: Story = {
 //     args: {
 //         label: 'Button'
