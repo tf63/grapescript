@@ -1,3 +1,5 @@
+[![Next CI](https://github.com/tf63/grapescript/actions/workflows/next.yml/badge.svg)](https://github.com/tf63/grapescript/actions/workflows/next.yml)
+
 ### タイピングアプリ (仮)
 
 **方向性**
