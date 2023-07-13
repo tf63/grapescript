@@ -1,6 +1,17 @@
-### タイピングアプリ (仮)
+## タイピングアプリ (仮)
 
 ![Next CI](https://github.com/tf63/grapescript/actions/workflows/next.yml/badge.svg)
+
+### 概要
+
+**Frontend**
+
+<img src="https://skillicons.dev/icons?i=ts,next,vercel,jest">
+
+**Backend**
+
+<img src="https://skillicons.dev/icons?i=postgres,supabase,prisma" />
+
 
 **方向性**
 - styled-componentではなくcss moduleを使う
@@ -9,6 +20,7 @@
 - memo.mdに色々書く，後々Qiitaにあげる
 - cssのクラス名はハイフンではなくアンダーバーで区切る
 
+### 各種コマンド
 
 **nextプロジェクトの作成**
 ```
@@ -99,3 +111,35 @@
 
 Supabase CLIのインストールとか
 - https://zenn.dev/razokulover/articles/db984ebfcf4bf6
+
+**Prismaの導入**
+- インストール
+- `init`すると`prisma/schema.prisma`ファイルが作成される
+```
+    npm install --save-dev prisma
+    npx prisma init
+```
+
+
+(注意)
+- **`.env`ファイルにprismaの環境変数が挿入されるが，`.env`ファイルはgit管理されているので`.env.local`のほうへ移動する**
+- `.env.local`はdocker-composeで読み込むようにしておく
+
+- Supabaseの`settings > Database`からDBのURI (Connection String) を確認し，環境変数に設定する
+![](docs/img/supabase_uri.png)
+
+```.env.local
+    DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@-----------------
+```
+
+- マイグレーションの実行
+- 既存のテーブルは全部消される
+- マイグレーションファイル
+```
+    npx prisma migrate dev --name <migration_name>
+```
+
+- https://zenn.dev/kuesato/articles/8da958751b52fb
+
+公式チュートリアル
+- https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/using-prisma-migrate-typescript-postgresql
