@@ -1,6 +1,6 @@
-[![Next CI](https://github.com/tf63/grapescript/actions/workflows/next.yml/badge.svg)](https://github.com/tf63/grapescript/actions/workflows/next.yml)
-
 ### タイピングアプリ (仮)
+
+![Next CI](https://github.com/tf63/grapescript/actions/workflows/next.yml/badge.svg)
 
 **方向性**
 - styled-componentではなくcss moduleを使う
