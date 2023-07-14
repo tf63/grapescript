@@ -17,15 +17,32 @@ const userData: Prisma.UserCreateInput[] = [
     }
 ]
 
+const todoData: Prisma.TodoCreateInput[] = [
+    {
+        title: 'タスク1',
+        completed: false
+    },
+    {
+        title: 'タスク2',
+        completed: false
+    },
+    {
+        title: 'タスク3',
+        completed: false
+    }
+]
+
 const transfer = async () => {
     const users = []
-    for (const u of userData) {
-        const user = prisma.user.create({
-            data: u
-        })
+    for (const data of userData) {
+        const user = prisma.user.upsert({ where: { email: data.email }, update: {}, create: data })
         users.push(user)
     }
     return await prisma.$transaction(users)
+}
+
+const transfer_todo = async () => {
+    await prisma.todo.createMany({ data: todoData })
 }
 
 // 定義されたデータを実際のモデルへ登録する処理
@@ -33,6 +50,7 @@ const main = async () => {
     console.log(`Start seeding ...`)
 
     await transfer()
+    await transfer_todo()
 
     console.log(`Seeding finished.`)
 }

@@ -4,13 +4,13 @@ import supabase from '../utils/supabase'
 
 export const InputTodoForm: React.FC = () => {
     const [title, setTitle] = useState('')
-    const { fetchTodos } = useAddTodo()
-    const data = { id: 2, title: 'aaaa', completed: false, created_at: '2023-07-13T07:05:12.731701+00:00' }
+    // const { fetchTodos } = useAddTodo()
+    const data = { title: 'aaaa', completed: false }
 
     const pushTodo = async (e: any) => {
         e.preventDefault()
-        await supabase.from('todo').insert({ title })
-        fetchTodos()
+        await supabase.from('Todo').insert({ title })
+        // fetchTodos()
         setTitle('')
     }
 
