@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <div className={styles.page_container}>
-                <LinkedButton href="/" text="Home" color="none" />
+                <LinkedButton href="/" text="Grape Script" color="none" />
                 <Component {...pageProps} />
             </div>
         </>

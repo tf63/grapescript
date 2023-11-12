@@ -1,6 +1,6 @@
 .button {
-    max-width: 300px;
-    margin: 60px auto;
+    /* max-width: 300px; */
+    width: 300px;
     padding: 2em;
     border: none;
     border-radius: .5rem;
@@ -12,6 +12,10 @@
     outline: none;
     cursor: pointer;
     transition: .2s ease-in-out;
+}
+
+.button_container {
+    margin: 50px auto
 }
 
 .blue {

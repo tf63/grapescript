@@ -1,8 +1,7 @@
 # my
 out/
 .DS_Store
-.env
-.env.prod
+migrations/
 
 # React
 # ---------------------------------------------
