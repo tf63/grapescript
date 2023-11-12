@@ -6,7 +6,8 @@ const Home: NextPage = () => {
     return (
         <main>
             <Card>This is Home Page</Card>
-            <LinkedButton href="/sample" text="Sample" color="blue" />
+            <LinkedButton href="/select" text="Select" color="blue" />
+            <LinkedButton href="/profile" text="Profile" color="blue" />
         </main>
     )
 }
